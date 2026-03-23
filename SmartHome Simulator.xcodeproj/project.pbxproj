@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F0B4B0DB2F718F2F001B8B33 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0B4B0DA2F718F2F001B8B33 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F0B4B07F2F685F98001B8B33 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		F0B4B0712F685F96001B8B33 /* SmartHome Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartHome Simulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B4B07E2F685F98001B8B33 /* SmartHome SimulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmartHome SimulatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B4B0882F685F98001B8B33 /* SmartHome SimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmartHome SimulatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0B4B0DA2F718F2F001B8B33 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		F0B4B0682F685F96001B8B33 = {
 			isa = PBXGroup;
 			children = (
+				F0B4B0DA2F718F2F001B8B33 /* README.md */,
 				F0B4B0732F685F96001B8B33 /* SmartHome Simulator */,
 				F0B4B0812F685F98001B8B33 /* SmartHome SimulatorTests */,
 				F0B4B08B2F685F98001B8B33 /* SmartHome SimulatorUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0B4B0DB2F718F2F001B8B33 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
