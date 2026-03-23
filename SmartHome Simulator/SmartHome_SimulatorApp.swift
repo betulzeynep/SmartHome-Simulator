@@ -11,7 +11,7 @@ import SwiftUI
 struct SmartHome_SimulatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SmartHomeMain()
         }
     }
 }
