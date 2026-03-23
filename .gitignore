@@ -1,0 +1,37 @@
+# --- Xcode ---
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.xcuserstate
+
+# --- Swift Package Manager ---
+.build/
+.swiftpm/
+# Eğer bağımlılıkları projeye dahil etmek istemiyorsan:
+# /Packages
+# /Package.resolved
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+Network Trash Folder
+Temporary Items
+.Spotlight-V100
+.Trashes
+
+# --- CocoaPods (Eğer kullanıyorsan) ---
+# Pods/ klasörü genellikle commit edilmez
+# Pods/
+
+# --- Hassas Veriler (KRİTİK) ---
+# API Key'lerin olduğu dosyaları buraya eklemelisin
+# Config.plist
+# .env
+
+# --- my working files ---
+CODE_REVIEW.md
+DOCUMENTATION_UPDATE.md
+IMPROVEMENTS_SUMMARY.md
