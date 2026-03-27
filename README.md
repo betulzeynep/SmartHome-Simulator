@@ -7,7 +7,9 @@ A modern iOS application demonstrating **Protocol-Oriented Programming (POP)** p
 ![SwiftUI](https://img.shields.io/badge/SwiftUI-5.0-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-<img src="screenshot.png" alt="Smart Home Simulator Screenshot" width="300"/>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/screenshot-main.png" alt="Smart Home Simulator Screenshot" width="300"/>
+</p>
 
 ---
 
@@ -48,21 +50,25 @@ This app simulates controlling smart home devices like lights, fans, and heaters
 ## ✨ Features
 
 ### Device Control
-- 💡 **Smart Lights** - Adjustable intensity with dimming control
-- 🌀 **Fans** - Variable speed control (0-100%) with oscillation
-- 🔥 **Heater** - Temperature management (coming soon: full implementation)
+- 💡 **Smart Lights** - Adjustable intensity with dimming control (0-60W consumption)
+- 🌀 **Fans** - Variable speed control (0-100%) with oscillation (0-50W consumption)
+- 🔥 **Heater** - Temperature management with full UI controls (1500W consumption)
 
 ### User Experience
 - 🎴 **Card-Based UI** - Clean, modern interface with device cards
 - ⚡ **Real-time Control** - Instant feedback with smooth animations
 - 🚨 **Error Alerts** - User-friendly error messages with recovery steps
-- 📊 **Energy Tracking** - Monitor device power consumption (Fan)
+- 📊 **Energy Tracking** - Real-time power consumption monitoring (NEW!)
+- 💰 **Cost Estimation** - Hourly, daily, and monthly energy cost estimates (NEW!)
+- 💡 **Energy Tips** - Smart recommendations for reducing consumption (NEW!)
 
 ### Developer Features
-- 🧪 **Comprehensive Tests** - 15+ unit tests with Swift Testing
+- 🧪 **Comprehensive Tests** - 16+ unit tests with Swift Testing
 - 🏗️ **Clean Architecture** - Organized, maintainable codebase
 - 📝 **Type Safety** - Validated inputs with proper error handling
 - ⚙️ **Extensible Design** - Easy to add new device types
+- ⚡ **Energy Monitoring** - Protocol-based energy tracking system (NEW!)
+- 📊 **Dashboard UI** - Beautiful energy consumption dashboard (NEW!)
 
 ---
 
@@ -220,18 +226,33 @@ SmartHome Simulator/
 │   │   ├── Switchable.swift          # On/off capability
 │   │   ├── SpeedControllable.swift   # Variable speed control
 │   │   ├── Dimmable.swift            # Intensity control
-│   │   └── TemperatureControllable.swift # Temperature management
+│   │   ├── TemperatureControllable.swift # Temperature management
+│   │   └── EnergyTracking.swift      # ⚡ NEW! Power consumption
 │   ├── Devices/
-│   │   ├── Light.swift               # Smart light implementation
-│   │   ├── Fan.swift                 # Fan with speed control
-│   │   └── Heater.swift              # Heating device
+│   │   ├── Light.swift               # Smart light (Dimmable + EnergyTracking)
+│   │   ├── Fan.swift                 # Fan with speed control + energy
+│   │   └── Heater.swift              # Heating device + energy tracking
 │   ├── DeviceIdentifier.swift        # Device identification
 │   └── DeviceError.swift             # Error types & messages
 ├── Views/
 │   ├── Cards/
 │   │   ├── DeviceCardView.swift      # Generic device card
 │   │   ├── LightControlCard.swift    # Light control interface
-│   │   └── FanControlCard.swift      # Fan control interface
+│   │   ├── FanControlCard.swift      # Fan control interface
+│   │   └── HeaterControlCard.swift   # Temperature control interface
+│   ├── EnergyDashboard.swift         # 📊 NEW! Energy monitoring UI
+│   ├── SmartHomeMain.swift           # Main app view
+│   └── ViewConstants.swift           # UI constants & icons
+├── Tests/
+│   └── SmartHome_SimulatorTests.swift # Unit tests (16+ tests)
+├── Documentation/
+│   ├── CODE_REVIEW_UPDATED.md        # Comprehensive code review
+│   ├── IMPROVEMENTS_SUMMARY.md       # Recent improvements
+│   ├── ENERGY_TRACKING_GUIDE.md      # ⚡ NEW! Energy usage guide
+│   └── README.md                     # This file
+└── Resources/
+    └── (Assets, Info.plist, etc.)
+```
 │   ├── SmartHomeMain.swift           # Main app view
 │   └── ViewConstants.swift           # UI constants & icons
 ├── Tests/
@@ -283,6 +304,39 @@ struct FanTests {
 - ✅ Error Handling: 100% coverage (1 test)
 
 **Total: 16 tests, all passing** ✅
+
+---
+
+## 💡 Energy Tracking System (NEW!)
+
+### Overview
+
+The app now includes comprehensive energy tracking for all devices:
+
+```swift
+protocol EnergyTracking {
+    var energyConsumption: Double { get }    // Power in Watts
+    var estimatedCostPerHour: Double { get } // Cost estimate
+}
+```
+
+### How It Works
+
+Each device calculates its real-time power consumption:
+
+- **Fan**: 0-50W (based on speed percentage)
+- **Light**: 0-60W (based on intensity)
+- **Heater**: 1500W (fixed when on)
+
+### Energy Dashboard
+
+View real-time monitoring with:
+- Current total power usage
+- Hourly/daily/monthly cost estimates
+- Per-device consumption breakdown
+- Energy-saving recommendations
+
+**See `ENERGY_TRACKING_GUIDE.md` for complete usage instructions!**
 
 ---
 
