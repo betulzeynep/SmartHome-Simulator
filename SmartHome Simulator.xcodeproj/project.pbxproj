@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F0B4B0DB2F718F2F001B8B33 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0B4B0DA2F718F2F001B8B33 /* README.md */; };
+		F0C47D702F78C40700E0A26F /* PROJECT_ROADMAP.md in Resources */ = {isa = PBXBuildFile; fileRef = F0C47D6F2F78C40700E0A26F /* PROJECT_ROADMAP.md */; };
+		F0C47D722F78C44600E0A26F /* DOCUMENTATION_CONSOLIDATION_SUMMARY.md in Resources */ = {isa = PBXBuildFile; fileRef = F0C47D712F78C44600E0A26F /* DOCUMENTATION_CONSOLIDATION_SUMMARY.md */; };
+		F0C47D742F78C46D00E0A26F /* QUICK_START.md in Resources */ = {isa = PBXBuildFile; fileRef = F0C47D732F78C46D00E0A26F /* QUICK_START.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,9 @@
 		F0B4B07E2F685F98001B8B33 /* SmartHome SimulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmartHome SimulatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B4B0882F685F98001B8B33 /* SmartHome SimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmartHome SimulatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B4B0DA2F718F2F001B8B33 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F0C47D6F2F78C40700E0A26F /* PROJECT_ROADMAP.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PROJECT_ROADMAP.md; sourceTree = "<group>"; };
+		F0C47D712F78C44600E0A26F /* DOCUMENTATION_CONSOLIDATION_SUMMARY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DOCUMENTATION_CONSOLIDATION_SUMMARY.md; sourceTree = "<group>"; };
+		F0C47D732F78C46D00E0A26F /* QUICK_START.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICK_START.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -85,6 +91,9 @@
 				F0B4B0812F685F98001B8B33 /* SmartHome SimulatorTests */,
 				F0B4B08B2F685F98001B8B33 /* SmartHome SimulatorUITests */,
 				F0B4B0722F685F96001B8B33 /* Products */,
+				F0C47D6F2F78C40700E0A26F /* PROJECT_ROADMAP.md */,
+				F0C47D712F78C44600E0A26F /* DOCUMENTATION_CONSOLIDATION_SUMMARY.md */,
+				F0C47D732F78C46D00E0A26F /* QUICK_START.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,7 +227,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C47D742F78C46D00E0A26F /* QUICK_START.md in Resources */,
+				F0C47D722F78C44600E0A26F /* DOCUMENTATION_CONSOLIDATION_SUMMARY.md in Resources */,
 				F0B4B0DB2F718F2F001B8B33 /* README.md in Resources */,
+				F0C47D702F78C40700E0A26F /* PROJECT_ROADMAP.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

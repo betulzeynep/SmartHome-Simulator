@@ -7,8 +7,7 @@ A modern iOS application demonstrating **Protocol-Oriented Programming (POP)** p
 ![SwiftUI](https://img.shields.io/badge/SwiftUI-5.0-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-<img width="402" height="874" alt="Simulator Screenshot - Clone 1 of iPhone 17 Pro - 2026-03-27 at 19 41 33" src="https://github.com/user-attachments/assets/668e25e5-b1b3-40fd-a88a-6ef7707142d4" />
-
+<img width="300" alt="Simulator Screenshot - Clone 1 of iPhone 17 Pro - 2026-03-27 at 19 41 33" src="https://github.com/user-attachments/assets/668e25e5-b1b3-40fd-a88a-6ef7707142d4" />
 
 ---
 
