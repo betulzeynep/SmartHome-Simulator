@@ -8,7 +8,7 @@ import Foundation
 import Observation
 
 @Observable
-class Fan: Switchable, SpeedControllable {
+final class Fan: Switchable, SpeedControllable {
     var device: DeviceIdentifier
     var isOn: Bool
     var speed: Int = 0
@@ -18,18 +18,13 @@ class Fan: Switchable, SpeedControllable {
     var minSpeed: Int { 0 }
     var maxSpeed: Int { 100 }
     
-    // track usage for eco-awareness
-    var energyConsumption: Double {
-        guard isOn else { return 0.0 }
-        return Double(speed) * 0.5 // watts based on speed
-    }
-    
     var isOscillating: Bool = false
     
     init(device: DeviceIdentifier, isOn: Bool, speed: Int, autoOffTimer: TimeInterval? = nil, isOscillating: Bool) {
         self.device = device
         self.isOn = isOn
-        self.speed = speed
+        // Validate speed before setting
+        self.speed = max(minSpeed, min(speed, maxSpeed))
         self.autoOffTimer = autoOffTimer
         self.isOscillating = isOscillating
     }
@@ -57,7 +52,7 @@ class Fan: Switchable, SpeedControllable {
     func turnOff() async throws {
         self.isOn = false
         // Keep the speed setting so when turned back on, it remembers
-        // Alternatively, you could reset to 0 if preferred
+        try setSpeed(0)
     }
     
     func toggleOscillation() {
@@ -82,5 +77,13 @@ extension Fan {
     
     func setSpeed(preset: SpeedPreset) async throws {
         try setSpeed(preset.rawValue)
+    }
+}
+
+// track usage for eco-awareness
+extension Fan: EnergyTracking {
+    var energyConsumption: Double {
+        guard isOn else { return 0.0 }
+        return Double(speed) * 0.5 // watts based on speed
     }
 }

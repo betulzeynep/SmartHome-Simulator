@@ -8,9 +8,9 @@
 import Observation
 
 @Observable
-class Light: Switchable, Dimmable {
+final class Light: Switchable, Dimmable {
     var device: DeviceIdentifier?
-    var intensity: Double
+    var intensity: Double = 0.0
     var isOn: Bool
     
     // Dimmable default implementation
@@ -19,8 +19,9 @@ class Light: Switchable, Dimmable {
     
     init(device: DeviceIdentifier? = nil, intensity: Double, isOn: Bool) {
         self.device = device
-        self.intensity = intensity
         self.isOn = isOn
+        // Validate intensity before setting
+        self.intensity = max(minIntensity, min(intensity, maxIntensity))
     }
     
     func turnOn() async throws {
@@ -39,5 +40,12 @@ class Light: Switchable, Dimmable {
             throw DeviceError.invalidIntensity(value)
         }
         self.intensity = value
+    }
+}
+
+extension Light: EnergyTracking {
+    var energyConsumption: Double {
+        guard isOn else { return 0.0 }
+        return intensity * 60.0 // 60W max bulb
     }
 }
